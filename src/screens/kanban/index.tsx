@@ -91,9 +91,6 @@ export const useDragEnd = () => {
       if (type === "ROW") {
         const fromKanbanId = +source.droppableId;
         const toKanbanId = +destination.droppableId;
-        if (fromKanbanId === toKanbanId) {
-          return;
-        }
         const fromTask = allTasks.filter(
           (task) => task.kanbanId === fromKanbanId
         )[source.index];
